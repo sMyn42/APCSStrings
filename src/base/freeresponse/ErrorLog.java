@@ -17,7 +17,12 @@ public class ErrorLog {
      */
     public boolean containsKey(String keyword) {
         /* part b */
-        return false;   // replace this
+        if (description.indexOf(keyword) == 0 || description.indexOf(" " + keyword) >= 0){
+            if (description.indexOf(keyword) == description.length() - keyword.length() || description.indexOf(keyword + " ") >= 0){
+                return true;
+            }
+        }
+        return false;
     }
 
     public String getMachineId() { return machineId;}
